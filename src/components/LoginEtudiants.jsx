@@ -17,28 +17,17 @@ function LoginEtudiants() {
   };
 
   return (
-    <MDBContainer fluid>
-
-      <MDBRow>
-
-        <MDBCol sm='6'>
-          <div className='d-flex flex-column justify-content-center h-custom-2 w-75 pt-4'>
-
-            <h3 className="fw-normal mb-3 ps-5 pb-3" style={{letterSpacing: '1px'}}>Etudiant:</h3>
-            <MDBInput wrapperClass='mb-4 mx-5 w-100' placeholder='Numéro appogée' id='formControlLg' type='password' size="lg"/>
-            <MDBBtn className="mb-4 px-5 mx-5 w-100" size='lg' style={btnStyle}>Se connecter</MDBBtn>
-
+    <form>
+      <div className="d-flex justify-content-center">
+        <div className='d-flex flex-column justify-content-center h-custom-2 w-50 pt-4'>
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form2Example1">Numero appogée</label>
+            <input type="email" id="form2Example1" class="form-control" placeholder='Numero appogée'/>
           </div>
-        </MDBCol>
-
-        <MDBCol sm='6' className='d-none d-sm-block px-0'>
-          <img src={photo}
-            alt="Login image" className="w-100" style={{objectFit: 'cover', objectPosition: 'left'}} />
-        </MDBCol>
-
-      </MDBRow>
-
-    </MDBContainer>
+          <button type="button" class="btn btn-primary btn-block mb-4" style={btnStyle}>Se connecter</button>
+        </div>
+      </div>
+    </form>
   );
 }
 

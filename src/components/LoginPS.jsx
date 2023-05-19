@@ -17,29 +17,21 @@ function LoginEtudiants() {
   };
 
   return (
-    <MDBContainer fluid>
-
-      <MDBRow>
-
-        <MDBCol sm='6'>
-          <div className='d-flex flex-column justify-content-center h-custom-2 w-75 pt-4'>
-
-            <h3 className="fw-normal mb-3 ps-5 pb-3" style={{letterSpacing: '1px'}}>Professeur/Surveillant:</h3>
-            <MDBInput wrapperClass='mb-4 mx-5 w-100' placeholder='Login' id='formControlLg' type='text' size="lg"/>
-            <MDBInput wrapperClass='mb-4 mx-5 w-100' placeholder='Mot de passe' id='formControlLg' type='password' size="lg"/>
-            <MDBBtn className="mb-4 px-5 mx-5 w-100" size='lg' style={btnStyle}>Se connecter</MDBBtn>
-
+    <form>
+      <div className="d-flex justify-content-center">
+        <div className='d-flex flex-column justify-content-center h-custom-2 w-50 pt-4'>
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form2Example1">Email address</label>
+            <input type="email" id="form2Example1" class="form-control" placeholder='email'/>
           </div>
-        </MDBCol>
-
-        <MDBCol sm='6' className='d-none d-sm-block px-0'>
-          <img src={photo}
-            alt="Login image" className="w-100" style={{objectFit: 'cover', objectPosition: 'left'}} />
-        </MDBCol>
-
-      </MDBRow>
-
-    </MDBContainer>
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form2Example2">Mot de passe</label>
+            <input type="password" id="form2Example2" class="form-control" placeholder='Mot de passe'/>
+          </div>
+          <button type="button" class="btn btn-primary btn-block mb-4" style={btnStyle}>Se connecter</button>
+        </div>
+      </div>
+    </form>
   );
 }
 
